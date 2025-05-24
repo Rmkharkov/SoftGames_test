@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 using Newtonsoft.Json;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -12,6 +13,7 @@ namespace MagicWords.Scripts
         [SerializeField] private DialogueUI dialogueUI;
         [SerializeField] private Sprite fallbackAvatar;
         [SerializeField] private DialogsConfig dialogsConfig;
+        [SerializeField] private EmojisConfig emojisConfig;
 
         void Start()
         {
@@ -52,9 +54,19 @@ namespace MagicWords.Scripts
                     }
                 }
 
+                entry.text = ReplaceEmojis(entry.text);
                 dialogueUI.Set(entry, avatarSprite);
                 yield return new WaitForSeconds(dialogsConfig.messageLifeTime);
             }
+        }
+        
+        private string ReplaceEmojis(string input)
+        {
+            return Regex.Replace(input, @"\{(\w+)\}", match =>
+            {
+                string key = match.Groups[1].Value;
+                return emojisConfig.GetEmoji(key);
+            });
         }
 
         [System.Serializable]
