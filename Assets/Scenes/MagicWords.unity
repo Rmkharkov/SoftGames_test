@@ -682,7 +682,7 @@ MonoBehaviour:
   dialogueUI: {fileID: 1086550978024397618}
   fallbackAvatar: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   dialogsConfig: {fileID: 11400000, guid: 5f7b0731384dd2a4780759b5c3940358, type: 2}
-  emojisConfig: {fileID: 11400000, guid: 25fb00a65c299f9418d793ca9de3c9e3, type: 2}
+  emojisConfig: {fileID: 0}
 --- !u!4 &1799612015
 Transform:
   m_ObjectHideFlags: 0
@@ -972,8 +972,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 23dc3f7ee11cb3a48ba5ae15357d7cd1, type: 2}
-  m_sharedMaterial: {fileID: 129014305739842149, guid: 23dc3f7ee11cb3a48ba5ae15357d7cd1, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -989,7 +989,7 @@ MonoBehaviour:
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
     bottomRight: {r: 1, g: 1, b: 1, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
-  m_spriteAsset: {fileID: 0}
+  m_spriteAsset: {fileID: 11400000, guid: d7a2957ea5214274396ce6d7a8ece8f8, type: 2}
   m_tintAllSprites: 0
   m_StyleSheet: {fileID: 0}
   m_TextStyleHashCode: -1183493901

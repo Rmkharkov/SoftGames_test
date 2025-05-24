@@ -13,7 +13,6 @@ namespace MagicWords.Scripts
         [SerializeField] private DialogueUI dialogueUI;
         [SerializeField] private Sprite fallbackAvatar;
         [SerializeField] private DialogsConfig dialogsConfig;
-        [SerializeField] private EmojisConfig emojisConfig;
 
         void Start()
         {
@@ -65,7 +64,7 @@ namespace MagicWords.Scripts
             return Regex.Replace(input, @"\{(\w+)\}", match =>
             {
                 string key = match.Groups[1].Value;
-                return emojisConfig.GetEmoji(key);
+                return $"<sprite name=\"{key}\">";
             });
         }
 
